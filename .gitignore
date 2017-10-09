@@ -1,0 +1,9 @@
+.idea
+static/node_modules/
+node_modules/
+.DS_Store
+static/js/bundles/
+static/webpack-stats.json
+static/webpack-stats-prod.json
+*.swp
+*.pyc
