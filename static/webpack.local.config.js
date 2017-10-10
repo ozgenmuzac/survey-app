@@ -15,21 +15,6 @@ config.plugins = config.plugins.concat([
 config.module.loaders = [
     { test: /\.js?$/, exclude: /node_modules/, loader: 'babel-loader' }, // to transform JSX into JS
     { test: /\.less?$/, loaders: ['style-loader', 'css-loader', 'less-loader']},
-    // { test: /\.less?$/, use: [{
-    //     loader: "style-loader" // creates style nodes from JS strings
-    // }, {
-    //     loader: "css-loader" // translates CSS into CommonJS
-    // }, {
-    //     loader: "less-loader" // compiles Less to CSS
-    // }] }
 ];
-
-// { test: /\.less?$/, use: [{
-        //         loader: "style-loader" // creates style nodes from JS strings
-        //     }, {
-        //         loader: "css-loader" // translates CSS into CommonJS
-        //     }, {
-        //         loader: "less-loader" // compiles Less to CSS
-        //     }] }
 
 module.exports = config;
