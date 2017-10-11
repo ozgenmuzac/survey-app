@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
-import cssModules from 'react-css-modules';
 import './main.less';
 
 @observer

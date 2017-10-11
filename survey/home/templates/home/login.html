@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="/static/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <title>Welcome Survey App</title>
+</head>
+<body>
+    <div class="container">
+        <form action="" method="post" class="form-container">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="sicilNo">Sicil No</label>
+                <input minlength=4 name="sicil" type="number" required="" id="sicilNo">
+            </div>
+            <button type="submit" class="btn btn-default">Start</button>
+        </form>
+    </div>
+</body>
+</html>
