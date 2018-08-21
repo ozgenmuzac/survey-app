@@ -11,7 +11,7 @@ export default class App extends React.Component {
 
     render() {
         return (
-            <div className="container">
+            <div styleName="container">
                 { this.props.store.listOfRenders.map(el => (
                         <span key={ el }>{ el }</span>
                     )

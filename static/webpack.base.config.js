@@ -1,6 +1,5 @@
-var path = require("path")
-var webpack = require('webpack')
-var BundleTracker = require('webpack-bundle-tracker')
+var path = require("path");
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     context: __dirname,
@@ -18,11 +17,20 @@ module.exports = {
     ],
 
     module: {
-        loaders: [],
+        rules: [
+            { test: /\.js?$/, exclude: /node_modules/, loader: 'babel-loader' }, // to transform JSX into JS
+            { test: /\.less?$/,
+                use: [
+                    'style-loader',
+                    { loader: 'css-loader', options: { modules: true ,localIdentName: '[name]--[local]--[hash:base64:5]'} },
+                    "less-loader",
+                ]
+            }
+        ],
     },
 
     resolve: {
         modules: ['node_modules', 'bower_components'],
         extensions: ['.js', '.jsx', '.less']
     },
-}
+};
